@@ -1,0 +1,85 @@
+[{
+        "id": 1,
+        "name": "Nget Tim",
+        "email": "ngettim14@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$KE9emV4k95A5yA0QaRha/OyYMEcUyUVOwcEAtjk1WspE712sXuioy",
+        "mobile_number": "",
+        "avatar": "upload/images/user/Nget Tim_1635929585_Nget Tim.jpg",
+        "remember_token": "3IOqDv4Tkk82UtWNY2WumJH8E92b1HfmkjsvffU94KCcvQYtEiBDS3uZ7BDT",
+        "created_at": "2021-10-10T10:50:07.000Z",
+        "updated_at": "2021-10-10T10:50:07.000Z"
+    },
+    {
+        "id": 3,
+        "name": "Test Admin",
+        "email": "admin@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$8/DCJza4TMhyFdNerOhOZuYPuVLhAZMizR5U4GMW/o1DGfVr2syK.",
+        "mobile_number": "",
+        "avatar": "",
+        "remember_token": "3TvtpqgoicKUhfqycLRmZlCZgxcT22IWrhJ7ItA7xx8rd45BD9sp5XnsSCh8",
+        "created_at": "2021-10-12T09:18:29.000Z",
+        "updated_at": "2021-10-12T09:18:29.000Z"
+    },
+    {
+        "id": 5,
+        "name": "Test Supper Admin",
+        "email": "super@admin.com",
+        "email_verified_at": null,
+        "password": "$2y$10$RsG0faMHuSfyspAn10gYz.xa/xQ6aEMuXEkI0zC5Rbkvy/s6p0tJ.",
+        "mobile_number": "",
+        "avatar": "",
+        "remember_token": null,
+        "created_at": "2021-10-12T10:43:35.000Z",
+        "updated_at": "2021-10-12T10:43:35.000Z"
+    },
+    {
+        "id": 6,
+        "name": "Bro Tim",
+        "email": "brotim@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$c9z4dX66NMTVp2rJfnzB5e9h35/48L4EAIDQTPZ83wWyZW0lZNWm.",
+        "mobile_number": "(016) 897-954_",
+        "avatar": "",
+        "remember_token": null,
+        "created_at": "2021-10-13T22:28:21.000Z",
+        "updated_at": "2021-10-13T22:28:21.000Z"
+    },
+    {
+        "id": 7,
+        "name": "Mr Jonh",
+        "email": "jonh@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$pnQJlft5pkvjd8hGH5lNH.8qOiQKWinT5rYZ9YNklEl1h5jAhdLnu",
+        "mobile_number": "(016) 897-965_",
+        "avatar": "",
+        "remember_token": null,
+        "created_at": "2021-10-13T22:30:28.000Z",
+        "updated_at": "2021-10-13T22:30:28.000Z"
+    },
+    {
+        "id": 11,
+        "name": "I'm Mr Ben",
+        "email": "mr--ben@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$Y3EzCuFinny6Tc.EJ40iQOlbg2A3vZ0wP70B.8GnPKxAQjRG8PqKS",
+        "mobile_number": "(016) 101-954_",
+        "avatar": "",
+        "remember_token": null,
+        "created_at": "2021-10-31T00:05:25.000Z",
+        "updated_at": "2021-10-31T00:28:47.000Z"
+    },
+    {
+        "id": 9,
+        "name": "Mr Ben",
+        "email": "ben@gmail.com",
+        "email_verified_at": null,
+        "password": "$2y$10$wkdo.64SKX2NxTb115YVsubW/cQRefnY9I7.gQc.teJhidjpXXXau",
+        "mobile_number": "(016) 097-954_",
+        "avatar": "",
+        "remember_token": null,
+        "created_at": "2021-10-19T00:28:44.000Z",
+        "updated_at": "2021-10-19T00:28:44.000Z"
+    }
+]

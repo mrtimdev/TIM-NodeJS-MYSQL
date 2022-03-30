@@ -4,9 +4,16 @@
 <%- include('header.ejs') %>
 
     <body>
+        <% if(title == "error") {%>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Your access token has expired.</strong>!</strong> You should check in on some of those fields below.
+            </div>
+            <% } else { %>
+                <%- include("menu.ejs") %>
 
-        <%- include("menu.ejs") %>
-            <%- include("footer.ejs") %>
+
+                    <%- include("footer.ejs") %>
+                        <% } %>
     </body>
 
 </html>

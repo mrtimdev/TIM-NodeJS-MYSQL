@@ -19,7 +19,9 @@ var Product = function(product) {
 // get all Products
 Product.getAllProducts = (result) => {
     const $sql = 'SELECT * FROM tim_products WHERE 1 = 1';
-    dbConn.query($sql, (err, res) => {
+    const $sqla = ` SELECT 
+                    * FROM tim_products WHERE 1 = 1`;
+    dbConn.query($sqla, (err, res) => {
         if (err) {
             console.log('Error while fetching product', err);
             result(null, err);

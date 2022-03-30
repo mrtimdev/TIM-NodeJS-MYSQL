@@ -32,7 +32,19 @@
                         Junk
                         <span class="badge badge-primary badge-pill">99</span>
                     </li>
+
                 </ul>
+                <h1>Users API</h1>
+
+                <% if(users.length > 0){ %>
+                    <% for(var i in users){ %>
+                        <p>
+                            <%= users[i].id + ' - ' + users[i].name + ' - ' + users[i].email%>
+                        </p>
+                        <% } %>
+                            <% } else { %>
+                                <p class="text-primary">No User Data</p>
+                                <% }%>
             </div>
         </div>
         <div class="col-md-8">
