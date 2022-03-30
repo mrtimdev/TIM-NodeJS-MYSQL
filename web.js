@@ -1,8 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const productRoutes = require('./router/productRoutes');
+const categoryRoutes = require('./router/categoryRoutes');
+const adminRoutes = require('./router/adminRoutes');
+const Routes = require('./router/Routes');
 const bodyParser = require('body-parser');
 const app = express();
+
+
+const zipLocal = require("zip-local");
+
+// zipLocal.sync.zip("files").compress().save("my-files.zip");
 // set using ejs
 app.set('view engine', 'ejs');
 // middleware & static files
@@ -10,16 +18,19 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 // parse request data content type application/json
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Welcome - TIM NODEJS Develop' });
-})
-app.use('/admin', productRoutes);
+        res.render('index', { title: 'Welcome - TIM NODEJS Develop' });
+    })
+    // app.use('/admin', productRoutes);
+    // app.use('/admin', categoryRoutes);
+app.use('/dashboard', Routes);
 
 app.get('/', (req, res) => {
-    res.send('Hello From Index MongoDB');
+    res.send('Hello From Index NODE JS mySQL');
 });
 
 

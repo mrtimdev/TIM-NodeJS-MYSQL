@@ -1,25 +1,12 @@
 const ProductModel = require('../../models/product/productModel');
 
 
-
-
-// // get all employee list
-// exports.getEmployeeList = (req, res) => {
-//     //console.log('here all products list');
-//     ProductModel.getAllEmployees((err, products) => {
-//         console.log('We are here');
-//         if (err)
-//             res.send(err);
-//         console.log('Employees', products);
-//         res.send(products)
-//     })
-// }
 const index = (req, res) => {
     ProductModel.getAllProducts((err, products) => {
         console.log('We are here');
         if (err)
             res.send(err);
-        console.log('Employees', products);
+        console.log('Products', products);
         res.render('product/index', { title: 'Products', products: products });
     })
 }
@@ -40,12 +27,25 @@ const store = (req, res) => {
 }
 
 const edit = (req, res) => {
-    // const product = new Product(req.body);
-    res.send('Hello From Product Model edit FN');
+    ProductModel.getProductByID(req.params.id, (err, product) => {
+        if (err)
+            res.send(err);
+        res.render('product/edit', { title: 'Edit Product', products: product });
+    })
 }
 const update = (req, res) => {
-    // const product = new Product(req.body);
-    res.send('Hello From Product Model update FN');
+    const ProductData = new ProductModel(req.body);
+    console.log('ProductData update', ProductData);
+    // check null
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
+        // res.send(400).send({ success: false, message: 'Please fill all fields' });
+    } else {
+        ProductModel.updateProduct(req.params.id, ProductData, (err, product) => {
+            if (err)
+            // res.send(err);
+                res.json({ status: true, message: 'Product updated Successfully' })
+        })
+    }
 }
 
 module.exports = {

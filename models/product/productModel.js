@@ -18,7 +18,7 @@ var Product = function(product) {
 
 // get all Products
 Product.getAllProducts = (result) => {
-    const $sql = 'SELECT * FROM tim_products WHERE is_deleted = 0';
+    const $sql = 'SELECT * FROM tim_products WHERE 1 = 1';
     dbConn.query($sql, (err, res) => {
         if (err) {
             console.log('Error while fetching product', err);
@@ -40,6 +40,19 @@ Product.getProductByID = (id, result) => {
             result(null, res);
         }
     })
+}
+
+// update employee
+Product.updateProduct = (id, productData, result) => {
+    dbConn.query("UPDATE tim_products SET name=?,code=?,email=?,weight=?,cost=?,price=?,quantity_alert=?, quantity=? WHERE id = ?", [productData.name, productData.cost, productData.price, productData.quantity_alert, productData.quantity, id], (err, res) => {
+        if (err) {
+            console.log('Error while updating the employee');
+            result(null, err);
+        } else {
+            console.log("Employee updated successfully");
+            result(null, res);
+        }
+    });
 }
 
 
