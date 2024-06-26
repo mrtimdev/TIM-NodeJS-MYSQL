@@ -3,11 +3,13 @@ const ProductModel = require('../../models/product/productModel');
 
 const index = (req, res) => {
     ProductModel.getAllProducts((err, products) => {
-        console.log('We are here');
         if (err)
             res.send(err);
-        console.log('Products', products);
-        res.render('product/index', { title: 'Products', products: products });
+        const bc = {
+            url: 'products',
+            page_title: 'Products List'
+        };
+        res.render('product/index', { bc, title: 'Products', products: products });
     })
 }
 const viewDetails = (req, res) => {
@@ -48,6 +50,10 @@ const update = (req, res) => {
     }
 }
 
+const OK = (req, res) => {
+    res.send('OK, Hello Bro');
+}
+
 module.exports = {
     index,
     create,
@@ -55,4 +61,5 @@ module.exports = {
     edit,
     update,
     viewDetails,
+    OK,
 }

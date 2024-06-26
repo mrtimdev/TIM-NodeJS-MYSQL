@@ -7,7 +7,7 @@ const Routes = require('./router/Routes');
 const bodyParser = require('body-parser');
 const app = express();
 var fs = require("fs");
-const axios = require('axios')
+const axios = require('axios');
 const zipLocal = require("zip-local");
 
 // zipLocal.sync.zip("files").compress().save("my-files.zip");
@@ -35,17 +35,6 @@ app.get('/', (req, res) => {
 
 
 // Restfull api
-
-// app.get('/listUsers', function(req, res) {
-//     let data = axios.get('http://localhost:5000/api/v1/employee/1').then((response) => {
-//         response.data.map((user) => {
-//             return user;
-//         });
-//     });
-//     console.log(data);
-//     res.render('index', { title: 'Users API', users: JSON.stringify(data) });
-// })
-
 app.get("/listUsers", async(req, res) => {
     var userDate = [];
     try {
